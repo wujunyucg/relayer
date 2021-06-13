@@ -658,8 +658,8 @@ func acknowledgementFromSequence(src, dst *Chain, seq uint64) ([]sdk.Msg, error)
 		return nil, err
 	case len(acks) == 0:
 		return nil, fmt.Errorf("no ack msgs created from query response")
-	case len(acks) > 1:
-		return nil, fmt.Errorf("more than one ack msg found in tx query")
+// 	case len(acks) > 1:
+// 		return nil, fmt.Errorf("more than one ack msg found in tx query")
 	}
 
 	pkt := acks[0]
